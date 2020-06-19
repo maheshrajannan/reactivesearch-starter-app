@@ -26,3 +26,7 @@ The ReactiveSearch components code resides in `src/App.js` file. For building th
  - **CategorySearch** - CategorySearch component provides a search box UI with categorized suggestions.
  - **SingleRange** - SingleRange component is used for displaying the star ratings.
  - **ResultCard** - ResultCard component is used for displaying the **hits** as a card layout.
+
+
+nvm install 8.17.0
+nvm use 8.17.0

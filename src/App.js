@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   ReactiveBase,
-  CategorySearch,
   SingleRange,
   ResultCard,
   ReactiveList
@@ -20,16 +19,6 @@ class App extends Component {
           <div
             style={{ display: "flex", flexDirection: "column", width: "40%" }}
           >
-            <CategorySearch
-              componentId="searchbox"
-              dataField="name"
-              categoryField="brand.raw"
-              placeholder="Search for cars"
-              style={{
-                padding: "5px",
-                marginTop: "10px"
-              }}
-            />
             <SingleRange
               componentId="ratingsfilter"
               title="Filter by ratings"
@@ -44,8 +33,7 @@ class App extends Component {
               style={{
                 padding: "5px",
                 marginTop: "10px"
-              }}
-            />
+              }} />
           </div>
           <ReactiveList
             componentId="result"
@@ -69,16 +57,14 @@ class App extends Component {
                     <ResultCard.Title
                       dangerouslySetInnerHTML={{
                         __html: item.name
-                      }}
-                    />
+                      }}  />
                     <ResultCard.Description>
                       {item.brand + " " + "★".repeat(item.rating)}
                     </ResultCard.Description>
                   </ResultCard>
                 ))}
               </ResultCardsWrapper>
-            )}
-          />
+            )} />
         </div>
       </ReactiveBase>
     );
